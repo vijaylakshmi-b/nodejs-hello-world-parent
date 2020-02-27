@@ -13,7 +13,9 @@ RUN npm install
 # RUN npm ci --only=production
 
 # Bundle app source
-COPY . .
+COPY index.js .
+
+ONBUILD COPY child.js .
 
 USER root 
 
